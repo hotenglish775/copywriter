@@ -1,291 +1,451 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Globe, BookOpen, FileText, Mail, Search, Edit, ArrowRight } from 'lucide-react';
+import { 
+  Target, Search, ShoppingCart, Megaphone, TestTube, 
+  FileText, MessageSquare, RefreshCw, Wrench, Hammer,
+  Bot, Zap, Brain, Lightbulb, MessageCircle, 
+  Star, Share2, Calendar, Video, Crown
+} from 'lucide-react';
 
 const Services = () => {
-  const services = [
+  const tier1Services = [
     {
-      icon: Globe,
-      title: 'Website Copywriting',
-      description: 'Complete website copy that converts visitors into customers with compelling headlines, persuasive product descriptions, and clear calls-to-action.',
-      features: [
-        'Homepage copy that captures attention',
-        'About page that builds trust',
-        'Service pages that sell',
-        'Landing pages optimized for conversion',
-      ],
-      price: 'Starting at $1,200',
-    },
-    {
-      icon: BookOpen,
-      title: 'Blog Articles',
-      description: 'SEO-optimized blog content that establishes authority, drives traffic, and engages your audience with valuable, actionable insights.',
-      features: [
-        'Keyword research and optimization',
-        'Engaging, shareable content',
-        'Industry expertise and thought leadership',
-        'Content calendar planning',
-      ],
-      price: 'Starting at $299',
-    },
-    {
-      icon: FileText,
-      title: 'Sales Pages',
-      description: 'High-converting sales pages that tell your story, address objections, and guide prospects through a compelling buying journey.',
-      features: [
-        'Psychological triggers and persuasion',
-        'Compelling storytelling',
-        'Objection handling',
-        'A/B testing recommendations',
-      ],
-      price: 'Starting at $1,500',
-    },
-    {
-      icon: Mail,
-      title: 'Email Sequences',
-      description: 'Strategic email campaigns that nurture leads, build relationships, and drive sales through personalized, value-driven messaging.',
-      features: [
-        'Welcome series automation',
-        'Sales funnel sequences',
-        'Newsletter campaigns',
-        'Segmentation strategies',
-      ],
-      price: 'Starting at $800',
+      icon: Target,
+      title: 'Lead Gen Funnel Package',
+      description: 'Complete lead generation funnel with landing page, opt-in forms, and nurture sequence',
+      price: '$300–$500',
+      features: ['Landing page copy', 'Lead magnet content', 'Email sequence', 'Thank you page']
     },
     {
       icon: Search,
-      title: 'SEO Optimization',
-      description: 'Content optimization that improves search rankings while maintaining readability and user engagement for maximum visibility.',
-      features: [
-        'Keyword strategy development',
-        'On-page optimization',
-        'Meta descriptions and titles',
-        'Content structure for SEO',
-      ],
-      price: 'Starting at $500',
+      title: 'Google Search Funnel Package',
+      description: 'SEO-optimized funnel designed to capture and convert search traffic',
+      price: '$400–$600',
+      features: ['SEO landing pages', 'Search-focused copy', 'Local SEO content', 'Conversion optimization']
     },
     {
-      icon: Edit,
-      title: 'Editing & Proofreading',
-      description: 'Professional editing services that polish your existing content for clarity, consistency, and maximum impact.',
-      features: [
-        'Copy editing for clarity',
-        'Proofreading for errors',
-        'Style and tone consistency',
-        'Brand voice alignment',
-      ],
-      price: 'Starting at $200',
+      icon: ShoppingCart,
+      title: 'Ecom Sales Funnel Package',
+      description: 'E-commerce focused sales funnel with product pages and checkout optimization',
+      price: '$350–$550',
+      features: ['Product descriptions', 'Sales pages', 'Cart abandonment emails', 'Upsell sequences']
     },
+    {
+      icon: Megaphone,
+      title: 'Starter Ads & Offer Setup',
+      description: 'Ad copy and offer positioning for new advertising campaigns',
+      price: '$150–$300',
+      features: ['Ad headlines', 'Offer positioning', 'CTA optimization', 'Audience targeting copy']
+    },
+    {
+      icon: TestTube,
+      title: 'Ad Copy Testing Pack',
+      description: 'Multiple ad variations for A/B testing and optimization',
+      price: '$150 one-time / $100 retainer',
+      features: ['5+ ad variations', 'Testing framework', 'Performance tracking', 'Monthly updates']
+    }
   ];
 
-  const pricingTiers = [
+  const tier2Services = [
     {
-      name: 'Starter',
-      price: '$299',
-      description: 'Perfect for small businesses getting started',
-      features: [
-        'One blog post (1,000 words)',
-        'SEO optimization',
-        'Basic keyword research',
-        '2 rounds of revisions',
-        '5-day turnaround',
-      ],
-      cta: 'Get Started',
-      popular: false,
+      icon: FileText,
+      title: 'Lead Magnet Creation + Page Copy',
+      description: 'High-converting lead magnets with dedicated landing pages',
+      price: '$200–$350',
+      features: ['Lead magnet content', 'Landing page copy', 'Opt-in forms', 'Thank you sequence']
     },
     {
-      name: 'Pro',
-      price: '$799',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Complete website copy (Home, About, Services)',
-        'Up to 3,000 words total',
-        'SEO optimization',
-        'Competitor analysis',
-        '3 rounds of revisions',
-        '7-day turnaround',
-        'Brand voice guidelines',
-      ],
-      cta: 'Get Started',
-      popular: true,
+      icon: MessageSquare,
+      title: 'Follow-Up Script Pack',
+      description: 'Email and SMS follow-up sequences for lead nurturing',
+      price: '$100–$200',
+      features: ['Email sequences', 'SMS scripts', 'Follow-up timing', 'Conversion tracking']
     },
     {
-      name: 'Elite',
-      price: '$1,499',
-      description: 'Complete copywriting solution',
-      features: [
-        'Full brand copywriting package',
-        'Website copy + blog articles',
-        'Email sequence (5-part series)',
-        'SEO content strategy',
-        'Unlimited revisions',
-        '14-day turnaround',
-        'Content calendar (3 months)',
-        '1-hour strategy call',
-      ],
-      cta: 'Get Started',
-      popular: false,
+      icon: RefreshCw,
+      title: 'Offer Rebuild & Positioning Refresh',
+      description: 'Complete offer restructuring and market positioning',
+      price: '$250–$400',
+      features: ['Market analysis', 'Offer restructuring', 'Value proposition', 'Pricing strategy']
     },
+    {
+      icon: Wrench,
+      title: 'Mini Funnel Audit + Upgrade',
+      description: 'Quick funnel analysis with optimization recommendations',
+      price: '$100–$250',
+      features: ['Funnel analysis', 'Conversion audit', 'Copy improvements', 'Implementation guide']
+    },
+    {
+      icon: Hammer,
+      title: 'Complete Funnel Overhaul',
+      description: 'Full funnel reconstruction from strategy to implementation',
+      price: '$750–$1,200',
+      features: ['Strategy development', 'Complete rewrite', 'A/B test setup', 'Performance monitoring']
+    }
+  ];
+
+  const tier3Services = [
+    {
+      icon: Bot,
+      title: 'AI Ad Variation Generator',
+      description: 'AI-powered system for generating unlimited ad variations',
+      price: '$100–$250',
+      features: ['Custom AI prompts', 'Variation templates', 'Brand voice training', 'Output optimization']
+    },
+    {
+      icon: Zap,
+      title: 'AI Lead Follow-Up Automation',
+      description: 'Automated follow-up sequences powered by AI personalization',
+      price: '$150–$300',
+      features: ['AI personalization', 'Behavioral triggers', 'Dynamic content', 'Performance analytics']
+    },
+    {
+      icon: Brain,
+      title: 'AI Lead Magnet Creator',
+      description: 'AI system for creating targeted lead magnets at scale',
+      price: '$200–$400',
+      features: ['Content generation', 'Design templates', 'Audience targeting', 'Performance tracking']
+    },
+    {
+      icon: Lightbulb,
+      title: 'AI Offer Angle Generator',
+      description: 'Generate multiple offer angles and positioning strategies',
+      price: '$150–$250',
+      features: ['Angle generation', 'Market research', 'Competitor analysis', 'Testing framework']
+    },
+    {
+      icon: MessageCircle,
+      title: 'Chatbot Script + Setup',
+      description: 'Conversational chatbot scripts for lead qualification',
+      price: '$200–$400',
+      features: ['Conversation flows', 'Lead qualification', 'Integration setup', 'Response optimization']
+    },
+    {
+      icon: Star,
+      title: 'AI Testimonial Collector',
+      description: 'Automated system for collecting and organizing testimonials',
+      price: '$100–$250',
+      features: ['Collection automation', 'Review prompts', 'Organization system', 'Display optimization']
+    },
+    {
+      icon: Share2,
+      title: 'Social Proof Automation Kit',
+      description: 'Automated social proof collection and display system',
+      price: '$150–$300',
+      features: ['Proof collection', 'Display widgets', 'Automation rules', 'Performance tracking']
+    },
+    {
+      icon: Calendar,
+      title: 'Auto-Scheduling Lead Flow',
+      description: 'Automated scheduling system for lead appointments',
+      price: '$200–$350',
+      features: ['Booking automation', 'Calendar integration', 'Reminder sequences', 'No-show prevention']
+    },
+    {
+      icon: Video,
+      title: 'AI Video Script Generator + Tools',
+      description: 'AI-powered video script creation with production tools',
+      price: '$250–$450',
+      features: ['Script generation', 'Storyboard creation', 'Voice-over tools', 'Video optimization']
+    }
+  ];
+
+  const premiumFeatures = [
+    'Full Funnel Build (Ad Copy, Targeting, Landing Page)',
+    'Lead Magnet Creation',
+    'Follow-Up Scripts & Setup',
+    'AI Chatbot for FB or Website',
+    'Short Video Script + AI Voiceover',
+    '30-Day Results Booster',
+    'BONUS: CRM + Review Automation Templates'
   ];
 
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-beige-50 to-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-bronze-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-slide-up">
-            Services That Drive Results
+          <h1 className="text-4xl lg:text-5xl font-serif font-bold text-text-heading mb-6 animate-slide-up">
+            Copywriting Services That Convert
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed animate-slide-up">
-            Professional copywriting services designed to transform your business communication 
-            and accelerate your growth through strategic, conversion-focused content.
+          <p className="text-xl text-text-body leading-relaxed animate-slide-up font-sans">
+            Choose from our tiered service packages designed to grow your business at every stage. 
+            From starter funnels to AI-powered automation, we have the perfect solution for your needs.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 lg:py-24">
+      {/* Tier 1 - Core Starter Funnels */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-bronze text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
+              💡 TIER 1
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
+              Core Starter Funnels
+            </h2>
+            <p className="text-xl text-text-body max-w-3xl mx-auto font-sans">
+              Essential funnel packages to get your business generating leads and sales
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {tier1Services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 group"
+                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-bronze-100 group animate-fade-in hover:shadow-glow"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-beige-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-beige-200 transition-colors">
-                  <service.icon className="h-8 w-8 text-gray-700" />
+                <div className="bg-gradient-to-br from-bronze-100 to-bronze-200 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-bronze-700" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-serif font-bold text-text-heading mb-3">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-text-body mb-4 leading-relaxed font-sans">
                   {service.description}
                 </p>
+
+                <div className="text-2xl font-bold text-bronze-600 mb-4 font-serif">
+                  {service.price}
+                </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-sm text-gray-600">{feature}</span>
+                      <div className="w-1.5 h-1.5 bg-bronze-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-sm text-text-body font-sans">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-gray-900">
-                    {service.price}
-                  </span>
-                  <Link
-                    to="/booking"
-                    className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors flex items-center group"
-                  >
-                    Book Now
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+                <Link
+                  to="/booking"
+                  className="w-full bg-gradient-bronze text-white py-3 px-6 rounded-full font-medium hover:bg-gradient-bronze-hover hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 lg:py-24 bg-beige-50">
+      {/* Tier 2 - Value-Add & Growth Packages */}
+      <section className="py-16 lg:py-24 bg-bronze-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Transparent Pricing
+            <div className="inline-flex items-center bg-slate-900 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
+              🧱 TIER 2
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
+              Value-Add & Growth Packages
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choose the package that fits your needs and budget. All packages include dedicated support and satisfaction guarantee.
+            <p className="text-xl text-text-body max-w-3xl mx-auto font-sans">
+              Advanced services to optimize and scale your existing funnels
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {tier2Services.map((service, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                  tier.popular ? 'ring-2 ring-gray-900 relative' : ''
-                }`}
+                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-slate-200 group animate-fade-in hover:shadow-glow"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
+                <div className="bg-gradient-to-br from-slate-100 to-slate-200 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-slate-700" />
+                </div>
+                
+                <h3 className="text-xl font-serif font-bold text-text-heading mb-3">
+                  {service.title}
+                </h3>
+                
+                <p className="text-text-body mb-4 leading-relaxed font-sans">
+                  {service.description}
+                </p>
 
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {tier.name}
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    {tier.description}
+                <div className="text-2xl font-bold text-slate-600 mb-4 font-serif">
+                  {service.price}
+                </div>
+
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-sm text-text-body font-sans">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/booking"
+                  className="w-full bg-slate-900 text-white py-3 px-6 rounded-full font-medium hover:bg-slate-800 hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tier 3 - AI-Powered Add-Ons */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
+              🤖 TIER 3
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
+              AI-Powered Add-Ons
+            </h2>
+            <p className="text-xl text-text-body max-w-3xl mx-auto font-sans">
+              Cutting-edge AI automation tools to supercharge your marketing
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {tier3Services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-purple-100 group animate-fade-in hover:shadow-glow"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="bg-gradient-to-br from-purple-100 to-blue-100 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-purple-700" />
+                </div>
+                
+                <h3 className="text-xl font-serif font-bold text-text-heading mb-3">
+                  {service.title}
+                </h3>
+                
+                <p className="text-text-body mb-4 leading-relaxed font-sans">
+                  {service.description}
+                </p>
+
+                <div className="text-2xl font-bold text-purple-600 mb-4 font-serif">
+                  {service.price}
+                </div>
+
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-sm text-text-body font-sans">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/booking"
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-full font-medium hover:from-purple-700 hover:to-blue-700 hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Premium Package Section */}
+      <section className="py-16 lg:py-24 bg-slate-900 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-bronze-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-bronze-300 rounded-full mix-blend-multiply filter blur-3xl animate-float delay-1000"></div>
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-gradient-bronze text-white px-8 py-4 rounded-full text-lg font-bold mb-8 shadow-glow-lg">
+              <Crown className="h-6 w-6 mr-3" />
+              💼 PREMIUM OFFER
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6">
+              All-In-One Growth Package
+            </h2>
+            <div className="text-3xl lg:text-4xl font-bold text-bronze-400 mb-8 font-serif">
+              $950–$1,500
+            </div>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-sans">
+              Everything you need to build, launch, and scale your business with cutting-edge automation
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-lg p-10 rounded-3xl border border-white/20 shadow-glow-lg">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-2xl font-serif font-bold text-white mb-6">What's Included:</h3>
+                <ul className="space-y-4">
+                  {premiumFeatures.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="w-2 h-2 bg-bronze-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <span className="text-slate-200 font-sans">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="flex flex-col justify-center">
+                <div className="bg-bronze-100 p-6 rounded-2xl mb-6">
+                  <h4 className="text-lg font-bold text-slate-900 mb-2 font-serif">30-Day Results Guarantee</h4>
+                  <p className="text-slate-700 text-sm font-sans">
+                    See measurable improvements in your conversion rates within 30 days, or we'll work with you until you do.
                   </p>
-                  
-                  <div className="mb-8">
-                    <span className="text-4xl font-bold text-gray-900">
-                      {tier.price}
-                    </span>
-                  </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/booking"
-                    className={`w-full py-3 px-6 rounded-full font-medium text-center transition-colors block ${
-                      tier.popular
-                        ? 'bg-gray-900 text-white hover:bg-gray-800'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
+                    className="bg-gradient-bronze text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gradient-bronze-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 text-center font-sans"
                   >
-                    {tier.cta}
+                    Get This Package
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="bg-transparent text-white px-8 py-4 rounded-full text-lg font-semibold border-2 border-bronze-400 hover:bg-bronze-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 text-center font-sans"
+                  >
+                    Book Strategy Call
                   </Link>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 bg-bronze-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
               How We Work Together
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-text-body font-sans">
               A streamlined process designed for maximum results and client satisfaction
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Discovery', description: 'We discuss your goals, audience, and project requirements' },
-              { step: '02', title: 'Strategy', description: 'I develop a content strategy tailored to your objectives' },
-              { step: '03', title: 'Creation', description: 'Professional copywriting with your brand voice in mind' },
-              { step: '04', title: 'Delivery', description: 'Final copy delivered with revisions and optimization tips' },
+              { step: '01', title: 'Discovery', description: 'We analyze your business, audience, and goals to create the perfect strategy' },
+              { step: '02', title: 'Strategy', description: 'Custom funnel strategy developed specifically for your market and objectives' },
+              { step: '03', title: 'Creation', description: 'Professional copywriting and funnel building with your brand voice in mind' },
+              { step: '04', title: 'Optimization', description: 'Continuous testing and optimization to maximize your conversion rates' },
             ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="bg-beige-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl font-bold text-gray-700">{process.step}</span>
+                <div className="bg-gradient-bronze w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
+                  <span className="text-xl font-bold text-white font-serif">{process.step}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-text-heading mb-2 font-serif">
                   {process.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-text-body text-sm leading-relaxed font-sans">
                   {process.description}
                 </p>
               </div>
@@ -295,24 +455,24 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gray-900">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
+          <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-6">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Let's discuss your project and create copy that drives real results for your business.
+          <p className="text-xl text-text-body mb-8 leading-relaxed font-sans">
+            Choose the perfect package for your business stage and start seeing results within 30 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/booking"
-              className="bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-bronze text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-gradient-bronze-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 font-sans"
             >
-              Book a Project
+              Start Your Project
             </Link>
             <Link
               to="/contact"
-              className="bg-transparent text-white px-8 py-4 rounded-full text-lg font-medium border-2 border-white hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-text-heading px-10 py-5 rounded-full text-xl font-semibold border-2 border-bronze-200 hover:border-bronze-400 hover:shadow-soft transition-all duration-300 transform hover:scale-105 font-sans"
             >
               Ask Questions
             </Link>
