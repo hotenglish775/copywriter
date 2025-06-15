@@ -163,7 +163,7 @@ const Services = () => {
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-bronze-50 to-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-navy-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-serif font-bold text-text-heading mb-6 animate-slide-up">
             Copywriting Services That Convert
@@ -179,7 +179,7 @@ const Services = () => {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-bronze text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
+            <div className="inline-flex items-center bg-gradient-primary text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
               💡 TIER 1
             </div>
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
@@ -194,11 +194,11 @@ const Services = () => {
             {tier1Services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-bronze-100 group animate-fade-in hover:shadow-glow"
+                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-teal-100 group animate-fade-in hover:shadow-glow"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-bronze-100 to-bronze-200 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
-                  <service.icon className="h-8 w-8 text-bronze-700" />
+                <div className="bg-gradient-to-br from-teal-100 to-blue-100 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-teal-700" />
                 </div>
                 
                 <h3 className="text-xl font-serif font-bold text-text-heading mb-3">
@@ -209,14 +209,14 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <div className="text-2xl font-bold text-bronze-600 mb-4 font-serif">
+                <div className="text-2xl font-bold text-teal-600 mb-4 font-serif">
                   {service.price}
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <div className="w-1.5 h-1.5 bg-bronze-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 bg-teal-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-sm text-text-body font-sans">{feature}</span>
                     </li>
                   ))}
@@ -224,7 +224,7 @@ const Services = () => {
 
                 <Link
                   to="/booking"
-                  className="w-full bg-gradient-bronze text-white py-3 px-6 rounded-full font-medium hover:bg-gradient-bronze-hover hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
+                  className="w-full bg-gradient-primary text-white py-3 px-6 rounded-full font-medium hover:bg-gradient-primary-hover hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
                 >
                   Get Started
                 </Link>
@@ -235,10 +235,10 @@ const Services = () => {
       </section>
 
       {/* Tier 2 - Value-Add & Growth Packages */}
-      <section className="py-16 lg:py-24 bg-bronze-50">
+      <section className="py-16 lg:py-24 bg-navy-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-slate-900 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
+            <div className="inline-flex items-center bg-navy-900 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
               🧱 TIER 2
             </div>
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
@@ -253,11 +253,11 @@ const Services = () => {
             {tier2Services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-slate-200 group animate-fade-in hover:shadow-glow"
+                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-navy-200 group animate-fade-in hover:shadow-glow"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-slate-100 to-slate-200 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
-                  <service.icon className="h-8 w-8 text-slate-700" />
+                <div className="bg-gradient-to-br from-navy-100 to-navy-200 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-navy-700" />
                 </div>
                 
                 <h3 className="text-xl font-serif font-bold text-text-heading mb-3">
@@ -268,14 +268,14 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <div className="text-2xl font-bold text-slate-600 mb-4 font-serif">
+                <div className="text-2xl font-bold text-navy-600 mb-4 font-serif">
                   {service.price}
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 bg-navy-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-sm text-text-body font-sans">{feature}</span>
                     </li>
                   ))}
@@ -283,7 +283,7 @@ const Services = () => {
 
                 <Link
                   to="/booking"
-                  className="w-full bg-slate-900 text-white py-3 px-6 rounded-full font-medium hover:bg-slate-800 hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
+                  className="w-full bg-navy-900 text-white py-3 px-6 rounded-full font-medium hover:bg-navy-800 hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
                 >
                   Get Started
                 </Link>
@@ -297,7 +297,7 @@ const Services = () => {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
+            <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-teal-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-glow">
               🤖 TIER 3
             </div>
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
@@ -312,11 +312,11 @@ const Services = () => {
             {tier3Services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-purple-100 group animate-fade-in hover:shadow-glow"
+                className="bg-white p-8 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-blue-100 group animate-fade-in hover:shadow-glow"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-purple-100 to-blue-100 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
-                  <service.icon className="h-8 w-8 text-purple-700" />
+                <div className="bg-gradient-to-br from-blue-100 to-teal-100 w-16 h-16 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                  <service.icon className="h-8 w-8 text-blue-700" />
                 </div>
                 
                 <h3 className="text-xl font-serif font-bold text-text-heading mb-3">
@@ -327,14 +327,14 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <div className="text-2xl font-bold text-purple-600 mb-4 font-serif">
+                <div className="text-2xl font-bold text-blue-600 mb-4 font-serif">
                   {service.price}
                 </div>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       <span className="text-sm text-text-body font-sans">{feature}</span>
                     </li>
                   ))}
@@ -342,7 +342,7 @@ const Services = () => {
 
                 <Link
                   to="/booking"
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-full font-medium hover:from-purple-700 hover:to-blue-700 hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
+                  className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-3 px-6 rounded-full font-medium hover:from-blue-700 hover:to-teal-700 hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
                 >
                   Get Started
                 </Link>
@@ -353,23 +353,23 @@ const Services = () => {
       </section>
 
       {/* Premium Package Section */}
-      <section className="py-16 lg:py-24 bg-slate-900 relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-navy-900 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-bronze-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-bronze-300 rounded-full mix-blend-multiply filter blur-3xl animate-float delay-1000"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float delay-1000"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-gradient-bronze text-white px-8 py-4 rounded-full text-lg font-bold mb-8 shadow-glow-lg">
+            <div className="inline-flex items-center bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-bold mb-8 shadow-glow-lg">
               <Crown className="h-6 w-6 mr-3" />
               💼 PREMIUM OFFER
             </div>
             <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6">
               All-In-One Growth Package
             </h2>
-            <div className="text-3xl lg:text-4xl font-bold text-bronze-400 mb-8 font-serif">
+            <div className="text-3xl lg:text-4xl font-bold text-teal-400 mb-8 font-serif">
               $950–$1,500
             </div>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-sans">
@@ -384,7 +384,7 @@ const Services = () => {
                 <ul className="space-y-4">
                   {premiumFeatures.map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-bronze-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-teal-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
                       <span className="text-slate-200 font-sans">{feature}</span>
                     </li>
                   ))}
@@ -392,9 +392,9 @@ const Services = () => {
               </div>
               
               <div className="flex flex-col justify-center">
-                <div className="bg-bronze-100 p-6 rounded-2xl mb-6">
-                  <h4 className="text-lg font-bold text-slate-900 mb-2 font-serif">30-Day Results Guarantee</h4>
-                  <p className="text-slate-700 text-sm font-sans">
+                <div className="bg-teal-100 p-6 rounded-2xl mb-6">
+                  <h4 className="text-lg font-bold text-navy-900 mb-2 font-serif">30-Day Results Guarantee</h4>
+                  <p className="text-navy-700 text-sm font-sans">
                     See measurable improvements in your conversion rates within 30 days, or we'll work with you until you do.
                   </p>
                 </div>
@@ -402,13 +402,13 @@ const Services = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/booking"
-                    className="bg-gradient-bronze text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gradient-bronze-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 text-center font-sans"
+                    className="bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gradient-primary-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 text-center font-sans"
                   >
                     Get This Package
                   </Link>
                   <Link
                     to="/contact"
-                    className="bg-transparent text-white px-8 py-4 rounded-full text-lg font-semibold border-2 border-bronze-400 hover:bg-bronze-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 text-center font-sans"
+                    className="bg-transparent text-white px-8 py-4 rounded-full text-lg font-semibold border-2 border-teal-400 hover:bg-teal-400 hover:text-navy-900 transition-all duration-300 transform hover:scale-105 text-center font-sans"
                   >
                     Book Strategy Call
                   </Link>
@@ -420,7 +420,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 lg:py-24 bg-bronze-50">
+      <section className="py-16 lg:py-24 bg-navy-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
@@ -439,7 +439,7 @@ const Services = () => {
               { step: '04', title: 'Optimization', description: 'Continuous testing and optimization to maximize your conversion rates' },
             ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gradient-bronze w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
+                <div className="bg-gradient-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
                   <span className="text-xl font-bold text-white font-serif">{process.step}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-text-heading mb-2 font-serif">
@@ -466,13 +466,13 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/booking"
-              className="bg-gradient-bronze text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-gradient-bronze-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 font-sans"
+              className="bg-gradient-primary text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-gradient-primary-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 font-sans"
             >
               Start Your Project
             </Link>
             <Link
               to="/contact"
-              className="bg-white text-text-heading px-10 py-5 rounded-full text-xl font-semibold border-2 border-bronze-200 hover:border-bronze-400 hover:shadow-soft transition-all duration-300 transform hover:scale-105 font-sans"
+              className="bg-white text-text-heading px-10 py-5 rounded-full text-xl font-semibold border-2 border-teal-200 hover:border-teal-400 hover:shadow-soft transition-all duration-300 transform hover:scale-105 font-sans"
             >
               Ask Questions
             </Link>

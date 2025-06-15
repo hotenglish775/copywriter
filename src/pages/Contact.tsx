@@ -33,12 +33,12 @@ const Contact = () => {
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-beige-50 to-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-navy-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-slide-up">
+          <h1 className="text-4xl lg:text-5xl font-bold text-text-heading mb-6 animate-slide-up">
             Let's Start a Conversation
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed animate-slide-up">
+          <p className="text-xl text-text-body leading-relaxed animate-slide-up">
             Have a project in mind? Questions about my services? I'd love to hear from you. 
             Let's discuss how we can work together to achieve your content goals.
           </p>
@@ -51,45 +51,45 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div className="animate-slide-up">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl font-bold text-text-heading mb-8">
                 Get in Touch
               </h2>
               
               <div className="space-y-8 mb-12">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-beige-100 p-3 rounded-xl flex-shrink-0">
-                    <Mail className="h-6 w-6 text-gray-700" />
+                  <div className="bg-teal-100 p-3 rounded-xl flex-shrink-0">
+                    <Mail className="h-6 w-6 text-teal-700" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">hello@sarahmitchell.com</p>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <h3 className="text-lg font-semibold text-text-heading mb-1">Email</h3>
+                    <p className="text-text-body">hello@sarahmitchell.com</p>
+                    <p className="text-sm text-text-light mt-1">
                       I typically respond within 24 hours
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-beige-100 p-3 rounded-xl flex-shrink-0">
-                    <Phone className="h-6 w-6 text-gray-700" />
+                  <div className="bg-teal-100 p-3 rounded-xl flex-shrink-0">
+                    <Phone className="h-6 w-6 text-teal-700" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <h3 className="text-lg font-semibold text-text-heading mb-1">Phone</h3>
+                    <p className="text-text-body">+1 (555) 123-4567</p>
+                    <p className="text-sm text-text-light mt-1">
                       Available Mon-Fri, 9AM-5PM EST
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-beige-100 p-3 rounded-xl flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-gray-700" />
+                  <div className="bg-teal-100 p-3 rounded-xl flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-teal-700" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Location</h3>
-                    <p className="text-gray-600">New York, NY</p>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <h3 className="text-lg font-semibold text-text-heading mb-1">Location</h3>
+                    <p className="text-text-body">New York, NY</p>
+                    <p className="text-sm text-text-light mt-1">
                       Working with clients worldwide
                     </p>
                   </div>
@@ -97,32 +97,32 @@ const Contact = () => {
               </div>
 
               {/* FAQ Section */}
-              <div className="bg-beige-50 p-6 rounded-2xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="bg-navy-50 p-6 rounded-2xl">
+                <h3 className="text-lg font-semibold text-text-heading mb-4">
                   Frequently Asked Questions
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">
+                    <h4 className="font-medium text-text-heading mb-1">
                       What's your typical turnaround time?
                     </h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-text-body">
                       Most projects are completed within 5-14 days, depending on scope and complexity.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">
+                    <h4 className="font-medium text-text-heading mb-1">
                       Do you offer revisions?
                     </h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-text-body">
                       Yes! All packages include 2-3 rounds of revisions to ensure you're completely satisfied.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">
+                    <h4 className="font-medium text-text-heading mb-1">
                       What information do you need to get started?
                     </h4>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-text-body">
                       I'll need details about your business, target audience, goals, and any existing brand guidelines.
                     </p>
                   </div>
@@ -132,8 +132,8 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-slide-up">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-navy-100">
+                <h3 className="text-2xl font-bold text-text-heading mb-6">
                   Send a Message
                 </h3>
 
@@ -148,14 +148,14 @@ const Contact = () => {
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-text-heading mb-2">
                       Full Name
                     </label>
                     <input
                       type="text"
                       id="name"
                       {...register('name', { required: 'Name is required' })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                       placeholder="Your full name"
                     />
                     {errors.name && (
@@ -164,7 +164,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-text-heading mb-2">
                       Email Address
                     </label>
                     <input
@@ -177,7 +177,7 @@ const Contact = () => {
                           message: 'Please enter a valid email address'
                         }
                       })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                       placeholder="your@email.com"
                     />
                     {errors.email && (
@@ -186,14 +186,14 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-900 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-text-heading mb-2">
                       Subject
                     </label>
                     <input
                       type="text"
                       id="subject"
                       {...register('subject', { required: 'Subject is required' })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                       placeholder="What's this about?"
                     />
                     {errors.subject && (
@@ -202,14 +202,14 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-text-heading mb-2">
                       Message
                     </label>
                     <textarea
                       id="message"
                       rows={6}
                       {...register('message', { required: 'Message is required' })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors resize-vertical"
+                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical"
                       placeholder="Tell me about your project or ask any questions..."
                     ></textarea>
                     {errors.message && (
@@ -220,7 +220,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-gradient-primary-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       'Sending...'
@@ -239,13 +239,13 @@ const Contact = () => {
       </section>
 
       {/* Map Section (Placeholder) */}
-      <section className="py-16 bg-beige-50">
+      <section className="py-16 bg-navy-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-200 h-64 rounded-2xl flex items-center justify-center">
+          <div className="bg-navy-200 h-64 rounded-2xl flex items-center justify-center">
             <div className="text-center">
-              <MapPin className="h-12 w-12 text-gray-500 mx-auto mb-4" />
-              <p className="text-gray-600 font-medium">Google Maps Integration</p>
-              <p className="text-gray-500 text-sm">Working with clients worldwide</p>
+              <MapPin className="h-12 w-12 text-navy-500 mx-auto mb-4" />
+              <p className="text-navy-600 font-medium">Google Maps Integration</p>
+              <p className="text-navy-500 text-sm">Working with clients worldwide</p>
             </div>
           </div>
         </div>

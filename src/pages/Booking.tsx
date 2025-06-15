@@ -65,21 +65,21 @@ const Booking = () => {
 
   if (isSubmitted) {
     return (
-      <div className="pt-20 min-h-screen bg-gradient-to-b from-beige-50 to-white flex items-center justify-center">
+      <div className="pt-20 min-h-screen bg-gradient-to-b from-navy-50 to-white flex items-center justify-center">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white p-12 rounded-2xl shadow-xl border border-gray-100">
+          <div className="bg-white p-12 rounded-2xl shadow-xl border border-navy-100">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="h-10 w-10 text-green-600" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl font-bold text-text-heading mb-4">
               Thank You for Your Booking!
             </h1>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-text-body mb-6 leading-relaxed">
               I've received your project request and will get back to you within 24 hours with next steps, 
               timeline, and any additional questions I might have.
             </p>
-            <div className="bg-beige-50 p-4 rounded-lg mb-6">
-              <p className="text-sm text-gray-700">
+            <div className="bg-navy-50 p-4 rounded-lg mb-6">
+              <p className="text-sm text-text-body">
                 <strong>What happens next:</strong><br />
                 • I'll review your project details<br />
                 • Send you a detailed proposal and timeline<br />
@@ -89,7 +89,7 @@ const Booking = () => {
             </div>
             <button
               onClick={() => window.location.href = '/'}
-              className="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+              className="bg-gradient-primary text-white px-8 py-3 rounded-full font-medium hover:bg-gradient-primary-hover transition-colors"
             >
               Return Home
             </button>
@@ -102,12 +102,12 @@ const Booking = () => {
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-beige-50 to-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-navy-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-slide-up">
+          <h1 className="text-4xl lg:text-5xl font-bold text-text-heading mb-6 animate-slide-up">
             Book Your Project
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed animate-slide-up">
+          <p className="text-xl text-text-body leading-relaxed animate-slide-up">
             Ready to get started? Fill out the form below and I'll send you a detailed proposal 
             within 24 hours. Let's create copy that converts!
           </p>
@@ -117,10 +117,10 @@ const Booking = () => {
       {/* Booking Form */}
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-            <div className="bg-gray-50 px-8 py-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900">Project Details</h2>
-              <p className="text-gray-600 mt-2">
+          <div className="bg-white rounded-2xl shadow-xl border border-navy-100 overflow-hidden">
+            <div className="bg-navy-50 px-8 py-6 border-b border-navy-200">
+              <h2 className="text-2xl font-bold text-text-heading">Project Details</h2>
+              <p className="text-text-body mt-2">
                 Tell me about your project so I can provide the best possible service
               </p>
             </div>
@@ -136,14 +136,14 @@ const Booking = () => {
               {/* Personal Information */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="fullName" className="block text-sm font-medium text-gray-900 mb-2">
+                  <label htmlFor="fullName" className="block text-sm font-medium text-text-heading mb-2">
                     Full Name *
                   </label>
                   <input
                     type="text"
                     id="fullName"
                     {...register('fullName', { required: 'Full name is required' })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                     placeholder="Your full name"
                   />
                   {errors.fullName && (
@@ -152,7 +152,7 @@ const Booking = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-text-heading mb-2">
                     Email Address *
                   </label>
                   <input
@@ -165,7 +165,7 @@ const Booking = () => {
                         message: 'Please enter a valid email address'
                       }
                     })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                     placeholder="your@email.com"
                   />
                   {errors.email && (
@@ -176,7 +176,7 @@ const Booking = () => {
 
               {/* Project Type */}
               <div>
-                <label htmlFor="projectType" className="block text-sm font-medium text-gray-900 mb-3">
+                <label htmlFor="projectType" className="block text-sm font-medium text-text-heading mb-3">
                   Project Type *
                 </label>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -185,8 +185,8 @@ const Booking = () => {
                       key={type.value}
                       className={`relative flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all ${
                         projectType === type.value
-                          ? 'border-gray-900 bg-gray-50'
-                          : 'border-gray-200 hover:border-gray-300'
+                          ? 'border-teal-500 bg-teal-50'
+                          : 'border-navy-200 hover:border-navy-300'
                       }`}
                     >
                       <input
@@ -197,12 +197,12 @@ const Booking = () => {
                       />
                       <div className="flex-1">
                         <div className="flex items-center justify-between">
-                          <span className="font-medium text-gray-900">{type.label}</span>
-                          <span className="text-sm text-gray-500">{type.price}</span>
+                          <span className="font-medium text-text-heading">{type.label}</span>
+                          <span className="text-sm text-text-light">{type.price}</span>
                         </div>
                       </div>
                       {projectType === type.value && (
-                        <div className="absolute top-2 right-2 w-2 h-2 bg-gray-900 rounded-full"></div>
+                        <div className="absolute top-2 right-2 w-2 h-2 bg-teal-500 rounded-full"></div>
                       )}
                     </label>
                   ))}
@@ -215,14 +215,14 @@ const Booking = () => {
               {/* Budget and Deadline */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-gray-900 mb-2">
+                  <label htmlFor="budget" className="block text-sm font-medium text-text-heading mb-2">
                     <DollarSign className="inline h-4 w-4 mr-1" />
                     Budget Range *
                   </label>
                   <select
                     id="budget"
                     {...register('budget', { required: 'Please select a budget range' })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   >
                     <option value="">Select budget range</option>
                     {budgetRanges.map((range) => (
@@ -235,7 +235,7 @@ const Booking = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="deadline" className="block text-sm font-medium text-gray-900 mb-2">
+                  <label htmlFor="deadline" className="block text-sm font-medium text-text-heading mb-2">
                     <Calendar className="inline h-4 w-4 mr-1" />
                     Preferred Deadline
                   </label>
@@ -244,14 +244,14 @@ const Booking = () => {
                     id="deadline"
                     {...register('deadline')}
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
                   />
                 </div>
               </div>
 
               {/* Project Details */}
               <div>
-                <label htmlFor="projectDetails" className="block text-sm font-medium text-gray-900 mb-2">
+                <label htmlFor="projectDetails" className="block text-sm font-medium text-text-heading mb-2">
                   <FileText className="inline h-4 w-4 mr-1" />
                   Project Details *
                 </label>
@@ -259,7 +259,7 @@ const Booking = () => {
                   id="projectDetails"
                   rows={6}
                   {...register('projectDetails', { required: 'Please provide project details' })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors resize-vertical"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical"
                   placeholder="Please describe your project in detail. Include information about:
 • Your business and target audience
 • Current challenges or goals
@@ -273,17 +273,17 @@ const Booking = () => {
               </div>
 
               {/* Submit Button */}
-              <div className="border-t border-gray-200 pt-8">
+              <div className="border-t border-navy-200 pt-8">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between">
                   <div className="mb-4 sm:mb-0">
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-text-body">
                       By submitting this form, you agree to receive a project proposal and further communication about your project.
                     </p>
                   </div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+                    className="bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gradient-primary-hover transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       'Submitting...'
@@ -299,13 +299,13 @@ const Booking = () => {
       </section>
 
       {/* What Happens Next */}
-      <section className="py-16 bg-beige-50">
+      <section className="py-16 bg-navy-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-text-heading mb-4">
               What Happens Next?
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-text-body">
               Here's my simple, transparent process for new projects
             </p>
           </div>
@@ -332,16 +332,16 @@ const Booking = () => {
               }
             ].map((step, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gray-900 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="bg-gradient-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-text-heading mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 mb-2 leading-relaxed">
+                <p className="text-text-body mb-2 leading-relaxed">
                   {step.description}
                 </p>
-                <span className="text-sm font-medium text-gray-500">
+                <span className="text-sm font-medium text-text-light">
                   {step.time}
                 </span>
               </div>

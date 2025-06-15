@@ -36,7 +36,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-gradient-bronze p-2 rounded-xl group-hover:shadow-glow transition-all duration-300">
+            <div className="bg-gradient-primary p-2 rounded-xl group-hover:shadow-glow transition-all duration-300">
               <PenTool className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-serif font-semibold text-text-heading">Sarah Mitchell</span>
@@ -50,19 +50,19 @@ const Navigation = () => {
                 to={link.path}
                 className={`text-sm font-medium transition-all duration-300 relative py-2 ${
                   location.pathname === link.path
-                    ? 'text-bronze-600'
-                    : 'text-text-body hover:text-bronze-500'
+                    ? 'text-teal-600'
+                    : 'text-text-body hover:text-teal-500'
                 }`}
               >
                 {link.name}
                 {location.pathname === link.path && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-bronze rounded-full" />
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-primary rounded-full" />
                 )}
               </Link>
             ))}
             <Link
               to="/booking"
-              className="bg-gradient-bronze text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gradient-bronze-hover hover:shadow-glow transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-primary text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gradient-primary-hover hover:shadow-glow transition-all duration-300 transform hover:scale-105"
             >
               Book Now
             </Link>
@@ -71,7 +71,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-xl text-text-body hover:text-bronze-500 hover:bg-bronze-50 transition-all duration-300"
+            className="md:hidden p-2 rounded-xl text-text-body hover:text-teal-500 hover:bg-teal-50 transition-all duration-300"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -79,7 +79,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-bronze-100 rounded-b-2xl shadow-soft-lg">
+          <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-teal-100 rounded-b-2xl shadow-soft-lg">
             <div className="px-4 pt-4 pb-6 space-y-2">
               {navLinks.map((link) => (
                 <Link
@@ -87,8 +87,8 @@ const Navigation = () => {
                   to={link.path}
                   className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
                     location.pathname === link.path
-                      ? 'text-bronze-600 bg-bronze-50'
-                      : 'text-text-body hover:text-bronze-500 hover:bg-bronze-50'
+                      ? 'text-teal-600 bg-teal-50'
+                      : 'text-text-body hover:text-teal-500 hover:bg-teal-50'
                   }`}
                 >
                   {link.name}
@@ -96,7 +96,7 @@ const Navigation = () => {
               ))}
               <Link
                 to="/booking"
-                className="block px-4 py-3 mt-4 bg-gradient-bronze text-white rounded-xl text-base font-medium text-center hover:bg-gradient-bronze-hover transition-all duration-300"
+                className="block px-4 py-3 mt-4 bg-gradient-primary text-white rounded-xl text-base font-medium text-center hover:bg-gradient-primary-hover transition-all duration-300"
               >
                 Book Now
               </Link>

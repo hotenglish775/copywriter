@@ -116,7 +116,7 @@ const Portfolio = () => {
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-bronze-50 to-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-navy-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-serif font-bold text-text-heading mb-6 animate-slide-up">
             Portfolio
@@ -129,11 +129,11 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 bg-white border-b border-bronze-100">
+      <section className="py-8 bg-white border-b border-teal-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center">
             <div className="flex items-center space-x-2 mr-6">
-              <Filter className="h-5 w-5 text-bronze-500" />
+              <Filter className="h-5 w-5 text-teal-500" />
               <span className="text-text-body font-medium font-sans">Filter by:</span>
             </div>
             <div className="flex flex-wrap gap-2 justify-center">
@@ -143,8 +143,8 @@ const Portfolio = () => {
                   onClick={() => setActiveFilter(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 font-sans ${
                     activeFilter === category
-                      ? 'bg-gradient-bronze text-white shadow-glow'
-                      : 'bg-bronze-50 text-text-body hover:bg-bronze-100 hover:shadow-soft'
+                      ? 'bg-gradient-primary text-white shadow-glow'
+                      : 'bg-teal-50 text-text-body hover:bg-teal-100 hover:shadow-soft'
                   }`}
                 >
                   {category}
@@ -172,10 +172,10 @@ const Portfolio = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bronze-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-glow">
-                      <ExternalLink className="h-4 w-4 text-bronze-700" />
+                      <ExternalLink className="h-4 w-4 text-teal-700" />
                     </div>
                   </div>
                 </div>
@@ -183,10 +183,10 @@ const Portfolio = () => {
                 {/* Project Info */}
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-medium text-bronze-600 font-sans">
+                    <span className="text-sm font-medium text-teal-600 font-sans">
                       {project.client}
                     </span>
-                    <span className="bg-bronze-100 text-bronze-700 px-3 py-1 rounded-full text-xs font-medium font-sans">
+                    <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-medium font-sans">
                       {project.category}
                     </span>
                   </div>
@@ -199,16 +199,16 @@ const Portfolio = () => {
                     {project.description}
                   </p>
 
-                  <div className="bg-gradient-to-r from-bronze-50 to-bronze-100 p-4 rounded-2xl mb-4 border border-bronze-200">
-                    <span className="text-sm font-semibold text-bronze-800 font-sans">Results: </span>
-                    <span className="text-sm text-bronze-700 font-sans">{project.results}</span>
+                  <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-4 rounded-2xl mb-4 border border-teal-200">
+                    <span className="text-sm font-semibold text-teal-800 font-sans">Results: </span>
+                    <span className="text-sm text-teal-700 font-sans">{project.results}</span>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-medium font-sans hover:bg-slate-200 transition-colors"
+                        className="bg-navy-100 text-navy-600 px-3 py-1 rounded-full text-xs font-medium font-sans hover:bg-navy-200 transition-colors"
                       >
                         {tag}
                       </span>
@@ -222,7 +222,7 @@ const Portfolio = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-16 lg:py-24 bg-bronze-50">
+      <section className="py-16 lg:py-24 bg-navy-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-4">
@@ -244,7 +244,7 @@ const Portfolio = () => {
                 <div className="text-3xl lg:text-4xl font-serif font-bold text-text-heading mb-2">
                   {stat.number}
                 </div>
-                <div className="text-lg font-semibold text-bronze-600 mb-1 font-sans">
+                <div className="text-lg font-semibold text-teal-600 mb-1 font-sans">
                   {stat.label}
                 </div>
                 <div className="text-sm text-text-body font-sans">
@@ -289,19 +289,19 @@ const Portfolio = () => {
                 result: '50+ qualified leads daily, 75% reduction in manual work'
               }
             ].map((study, index) => (
-              <div key={index} className="bg-gradient-to-r from-bronze-50 to-white p-8 rounded-3xl shadow-soft border border-bronze-100">
+              <div key={index} className="bg-gradient-to-r from-teal-50 to-white p-8 rounded-3xl shadow-soft border border-teal-100">
                 <h3 className="text-2xl font-serif font-bold text-text-heading mb-4">{study.title}</h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
-                    <h4 className="font-semibold text-bronze-600 mb-2 font-sans">Challenge</h4>
+                    <h4 className="font-semibold text-teal-600 mb-2 font-sans">Challenge</h4>
                     <p className="text-text-body text-sm font-sans">{study.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-bronze-600 mb-2 font-sans">Solution</h4>
+                    <h4 className="font-semibold text-teal-600 mb-2 font-sans">Solution</h4>
                     <p className="text-text-body text-sm font-sans">{study.solution}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-bronze-600 mb-2 font-sans">Result</h4>
+                    <h4 className="font-semibold text-teal-600 mb-2 font-sans">Result</h4>
                     <p className="text-text-body text-sm font-bold font-sans">{study.result}</p>
                   </div>
                 </div>
@@ -312,11 +312,11 @@ const Portfolio = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-slate-900 relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-navy-900 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-bronze-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-bronze-300 rounded-full mix-blend-multiply filter blur-3xl animate-float delay-1000"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float delay-1000"></div>
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -329,13 +329,13 @@ const Portfolio = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/booking"
-              className="bg-gradient-bronze text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-gradient-bronze-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 font-sans"
+              className="bg-gradient-primary text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-gradient-primary-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 font-sans"
             >
               Start Your Funnel Project
             </a>
             <a
               href="/contact"
-              className="bg-transparent text-white px-10 py-5 rounded-full text-xl font-semibold border-2 border-bronze-400 hover:bg-bronze-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 font-sans"
+              className="bg-transparent text-white px-10 py-5 rounded-full text-xl font-semibold border-2 border-teal-400 hover:bg-teal-400 hover:text-navy-900 transition-all duration-300 transform hover:scale-105 font-sans"
             >
               View More Case Studies
             </a>

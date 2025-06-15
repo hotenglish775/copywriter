@@ -84,18 +84,18 @@ const Home = () => {
   return (
     <div className="animate-fade-in">
       {/* Full-Screen Hero Banner */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-bronze-50 via-white to-background-light relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-navy-50 via-white to-teal-50 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-bronze-200 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
-          <div className="absolute top-40 right-20 w-72 h-72 bg-bronze-300 rounded-full mix-blend-multiply filter blur-xl animate-float delay-1000"></div>
-          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-bronze-100 rounded-full mix-blend-multiply filter blur-xl animate-float delay-2000"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+          <div className="absolute top-40 right-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-float delay-1000"></div>
+          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-teal-100 rounded-full mix-blend-multiply filter blur-xl animate-float delay-2000"></div>
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-text-heading leading-tight mb-8 animate-slide-up">
             Powerful Words.{' '}
-            <span className="text-bronze-600 block lg:inline">Real Results.</span>
+            <span className="text-teal-600 block lg:inline">Real Results.</span>
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-text-body mb-12 leading-relaxed max-w-4xl mx-auto animate-slide-up font-sans">
@@ -105,7 +105,7 @@ const Home = () => {
           <div className="animate-slide-up">
             <Link
               to="/booking"
-              className="inline-flex items-center bg-gradient-bronze text-white px-12 py-6 rounded-full text-xl font-semibold hover:bg-gradient-bronze-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 group"
+              className="inline-flex items-center bg-gradient-primary text-white px-12 py-6 rounded-full text-xl font-semibold hover:bg-gradient-primary-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 group"
             >
               Let's Work Together
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
@@ -114,8 +114,8 @@ const Home = () => {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-bronze-400 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-bronze-400 rounded-full mt-2 animate-pulse"></div>
+            <div className="w-6 h-10 border-2 border-teal-400 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-teal-400 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </div>
@@ -137,11 +137,11 @@ const Home = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 lg:p-10 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-bronze-100 group animate-glow hover:shadow-glow"
+                className="bg-white p-8 lg:p-10 rounded-3xl shadow-soft hover:shadow-soft-lg transition-all duration-500 transform hover:-translate-y-3 border border-navy-100 group animate-glow hover:shadow-glow"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-bronze-100 to-bronze-200 w-20 h-20 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
-                  <service.icon className="h-10 w-10 text-bronze-700" />
+                <div className="bg-gradient-to-br from-teal-100 to-blue-100 w-20 h-20 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                  <service.icon className="h-10 w-10 text-teal-700" />
                 </div>
                 <h3 className="text-2xl font-serif font-bold text-text-heading mb-4">
                   {service.title}
@@ -156,7 +156,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials with Profile Pictures */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-bronze-50 to-white">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-navy-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-4xl lg:text-5xl font-serif font-bold text-text-heading mb-6">
@@ -176,14 +176,14 @@ const Home = () => {
               >
                 {/* Quote Icon */}
                 <div className="absolute -top-4 left-8">
-                  <div className="bg-gradient-bronze text-white w-8 h-8 rounded-full flex items-center justify-center text-xl font-bold shadow-glow">
+                  <div className="bg-gradient-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-xl font-bold shadow-glow">
                     "
                   </div>
                 </div>
 
                 <div className="flex items-center mb-6 pt-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-bronze-400 fill-current" />
+                    <Star key={i} className="h-5 w-5 text-teal-400 fill-current" />
                   ))}
                 </div>
                 
@@ -195,7 +195,7 @@ const Home = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover mr-4 ring-4 ring-bronze-100 shadow-soft"
+                    className="w-16 h-16 rounded-full object-cover mr-4 ring-4 ring-teal-100 shadow-soft"
                   />
                   <div>
                     <h4 className="font-serif font-bold text-text-heading text-lg">{testimonial.name}</h4>
@@ -233,10 +233,10 @@ const Home = () => {
                     alt={project.title}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bronze-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-8">
-                  <div className="text-sm font-semibold text-bronze-600 mb-2 uppercase tracking-wider font-sans">
+                  <div className="text-sm font-semibold text-teal-600 mb-2 uppercase tracking-wider font-sans">
                     {project.client}
                   </div>
                   <h3 className="text-2xl font-serif font-bold text-text-heading mb-4">
@@ -253,7 +253,7 @@ const Home = () => {
           <div className="text-center">
             <Link
               to="/portfolio"
-              className="inline-flex items-center text-bronze-600 font-bold text-xl hover:text-bronze-700 transition-colors group font-sans"
+              className="inline-flex items-center text-teal-600 font-bold text-xl hover:text-teal-700 transition-colors group font-sans"
             >
               View All Projects
               <ChevronRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
@@ -263,11 +263,11 @@ const Home = () => {
       </section>
 
       {/* Call-to-Action Section */}
-      <section className="py-20 lg:py-32 bg-slate-900 relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-navy-900 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-bronze-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-bronze-300 rounded-full mix-blend-multiply filter blur-3xl animate-float delay-1000"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-float delay-1000"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -280,13 +280,13 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/booking"
-              className="bg-gradient-bronze text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-gradient-bronze-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 font-sans"
+              className="bg-gradient-primary text-white px-10 py-5 rounded-full text-xl font-semibold hover:bg-gradient-primary-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 font-sans"
             >
               Start Your Project
             </Link>
             <Link
               to="/contact"
-              className="bg-transparent text-white px-10 py-5 rounded-full text-xl font-semibold border-2 border-bronze-400 hover:bg-bronze-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 font-sans"
+              className="bg-transparent text-white px-10 py-5 rounded-full text-xl font-semibold border-2 border-teal-400 hover:bg-teal-400 hover:text-navy-900 transition-all duration-300 transform hover:scale-105 font-sans"
             >
               Let's Chat
             </Link>
