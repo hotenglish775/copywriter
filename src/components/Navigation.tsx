@@ -42,7 +42,7 @@ const Navigation = () => {
               <PenTool className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-serif font-semibold text-text-heading group-hover:text-text-accent transition-colors duration-300">
-              Sarah Mitchell
+              Revolution AI CopyWriters
             </span>
           </Link>
 

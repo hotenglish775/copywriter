@@ -40,7 +40,7 @@ const Contact = () => {
             Let's Start a Conversation
           </h1>
           <p className="text-xl text-text-body leading-relaxed animate-slide-up">
-            Have a project in mind? Questions about my services? I'd love to hear from you. 
+            Have a project in mind? Questions about our services? We'd love to hear from you. 
             Let's discuss how we can work together to achieve your content goals.
           </p>
         </div>
@@ -64,9 +64,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-text-heading mb-1">Email</h3>
-                    <p className="text-text-body">hello@sarahmitchell.com</p>
+                    <p className="text-text-body">hello@revolutionai.com</p>
                     <p className="text-sm text-text-light mt-1">
-                      I typically respond within 24 hours
+                      We typically respond within 24 hours
                     </p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                       What information do you need to get started?
                     </h4>
                     <p className="text-sm text-text-body">
-                      I'll need details about your business, target audience, goals, and any existing brand guidelines.
+                      We'll need details about your business, target audience, goals, and any existing brand guidelines.
                     </p>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                   <div className="mb-6 p-4 bg-teal-500/20 border border-teal-500/30 rounded-lg flex items-center">
                     <CheckCircle className="h-5 w-5 text-text-accent mr-3" />
                     <p className="text-text-accent">
-                      Thank you for your message! I'll get back to you within 24 hours.
+                      Thank you for your message! We'll get back to you within 24 hours.
                     </p>
                   </div>
                 )}
@@ -212,7 +212,7 @@ const Contact = () => {
                       rows={6}
                       {...register('message', { required: 'Message is required' })}
                       className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical text-text-heading placeholder-text-light"
-                      placeholder="Tell me about your project or ask any questions..."
+                      placeholder="Tell us about your project or ask any questions..."
                     ></textarea>
                     {errors.message && (
                       <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>

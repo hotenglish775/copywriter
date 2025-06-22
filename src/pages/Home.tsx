@@ -41,21 +41,21 @@ const Home = () => {
       name: 'Jennifer Hayes',
       company: 'Digital Marketing Agency',
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      quote: 'Sarah transformed our lead generation funnel and our conversion rates increased by 65%. Her strategic approach to funnel building is incredible.',
+      quote: 'Revolution AI CopyWriters transformed our lead generation funnel and our conversion rates increased by 65%. Their strategic approach to funnel building is incredible.',
       rating: 5,
     },
     {
       name: 'Michael Chen',
       company: 'E-commerce Startup',
       image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      quote: 'Working with Sarah was a game-changer. She helped us build a complete sales funnel that generated $250K in the first month.',
+      quote: 'Working with Revolution AI CopyWriters was a game-changer. They helped us build a complete sales funnel that generated $250K in the first month.',
       rating: 5,
     },
     {
       name: 'Lisa Rodriguez',
       company: 'SaaS Company',
       image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      quote: 'Sarah\'s AI-powered follow-up sequences and lead magnets have completely automated our lead nurturing process with amazing results.',
+      quote: 'Revolution AI CopyWriters\' AI-powered follow-up sequences and lead magnets have completely automated our lead nurturing process with amazing results.',
       rating: 5,
     },
   ];
@@ -130,7 +130,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-4xl lg:text-5xl font-serif font-bold text-text-heading mb-6">
-              What I Do Best
+              What We Do Best
             </h2>
             <p className="text-xl lg:text-2xl text-text-body max-w-3xl mx-auto leading-relaxed font-sans">
               Specialized funnel building and copywriting services that transform your business communication and accelerate growth

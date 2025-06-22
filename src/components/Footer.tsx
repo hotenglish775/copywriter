@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="bg-gradient-primary p-2 rounded-xl shadow-glow animate-pulse-glow">
                 <PenTool className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-serif font-semibold text-text-heading">Sarah Mitchell</span>
+              <span className="text-xl font-serif font-semibold text-text-heading">Revolution AI CopyWriters</span>
             </div>
             <p className="text-text-body text-sm leading-relaxed font-sans mb-6">
               Professional copywriter and content strategist helping brands communicate clearly and convert effectively.
@@ -88,7 +88,7 @@ const Footer = () => {
                 <div className="bg-teal-500/20 p-2 rounded-lg border border-teal-500/30">
                   <Mail className="h-4 w-4 text-text-accent" />
                 </div>
-                <span className="text-text-body text-sm font-sans">hello@sarahmitchell.com</span>
+                <span className="text-text-body text-sm font-sans">hello@revolutionai.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="bg-teal-500/20 p-2 rounded-lg border border-teal-500/30">
@@ -110,7 +110,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-teal-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-text-light text-sm font-sans">
-              © 2024 Sarah Mitchell. All rights reserved.
+              © 2024 Revolution AI CopyWriters. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="#" className="text-text-light hover:text-text-accent text-sm transition-colors font-sans">

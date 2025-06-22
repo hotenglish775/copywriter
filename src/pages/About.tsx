@@ -46,16 +46,16 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-slide-up">
               <h1 className="text-4xl lg:text-5xl font-bold text-text-heading mb-6">
-                Hi, I'm Sarah Mitchell
+                Hi, We're Revolution AI CopyWriters
               </h1>
               <p className="text-xl text-text-body mb-6 leading-relaxed">
-                A passionate copywriter and content strategist who believes that the right words 
-                can transform businesses. I help brands find their voice and create content that 
+                A passionate team of copywriters and content strategists who believe that the right words 
+                can transform businesses. We help brands find their voice and create content that 
                 not only engages but converts.
               </p>
               <p className="text-lg text-text-body mb-8 leading-relaxed">
                 With over 5 years of experience working with startups, agencies, and established 
-                businesses, I've learned that great copy isn't just about clever words—it's about 
+                businesses, we've learned that great copy isn't just about clever words—it's about 
                 understanding your audience and crafting messages that resonate with their needs, 
                 desires, and pain points.
               </p>
@@ -75,7 +75,7 @@ const About = () => {
               <div className="relative">
                 <img
                   src="https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=500&h=600&fit=crop"
-                  alt="Sarah Mitchell"
+                  alt="Revolution AI CopyWriters"
                   className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-glow border border-teal-500/30"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent rounded-2xl"></div>
@@ -90,13 +90,13 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-glow opacity-10"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl lg:text-4xl font-bold text-text-heading mb-8">
-            My Mission
+            Our Mission
           </h2>
           <p className="text-xl text-text-body leading-relaxed mb-8">
-            I believe every business has a unique story worth telling. My mission is to help you 
+            We believe every business has a unique story worth telling. Our mission is to help you 
             tell that story in a way that connects with your audience and drives real results. 
             Whether it's crafting compelling website copy, creating engaging blog content, or 
-            developing email sequences that convert, I'm here to help your words work harder for your business.
+            developing email sequences that convert, we're here to help your words work harder for your business.
           </p>
           <blockquote className="text-2xl font-light text-text-heading italic border-l-4 border-teal-400 pl-6 bg-navy-800/30 p-6 rounded-r-2xl shadow-cyber">
             "Great copy doesn't just inform—it transforms. It turns visitors into customers, 
@@ -145,10 +145,10 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-text-heading mb-4">
-              My Journey
+              Our Journey
             </h2>
             <p className="text-xl text-text-body">
-              Key milestones that shaped my copywriting career
+              Key milestones that shaped our copywriting career
             </p>
           </div>
 

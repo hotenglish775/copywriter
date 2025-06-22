@@ -1,4 +1,4 @@
-# Sarah Mitchell - Copywriter & Content Strategist Website
+# Revolution AI CopyWriters - Copywriter & Content Strategist Website
 
 A modern, professional website for copywriting and content strategy services built with React, TypeScript, and Tailwind CSS. Features a complete payment integration system with both traditional and cryptocurrency payment options.
 
@@ -65,7 +65,7 @@ SMTP_HOST=your_smtp_host
 SMTP_PORT=587
 SMTP_USER=your_smtp_username
 SMTP_PASS=your_smtp_password
-SMTP_FROM=hello@sarahmitchell.com
+SMTP_FROM=hello@revolutionai.com
 
 # Payment Processing (Required for payments)
 STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key
