@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PaymentModal from '../components/PaymentModal';
 import { 
   Target, Search, ShoppingCart, Megaphone, TestTube, 
   FileText, MessageSquare, RefreshCw, Wrench, Hammer,
@@ -8,6 +9,22 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+
+  const handleBuyNow = (service: any, tier: string) => {
+    const product = {
+      id: `${tier}-${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+      title: service.title,
+      price: service.price.split('–')[0], // Take the lower price for simplicity
+      description: service.description,
+      features: service.features
+    };
+    
+    setSelectedProduct(product);
+    setIsPaymentModalOpen(true);
+  };
+
   const tier1Services = [
     {
       icon: Target,
@@ -41,7 +58,7 @@ const Services = () => {
       icon: TestTube,
       title: 'Ad Copy Testing Pack',
       description: 'Multiple ad variations for A/B testing and optimization',
-      price: '$150 one-time / $100 retainer',
+      price: '$150',
       features: ['5+ ad variations', 'Testing framework', 'Performance tracking', 'Monthly updates']
     }
   ];
@@ -79,7 +96,7 @@ const Services = () => {
       icon: Hammer,
       title: 'Complete Funnel Overhaul',
       description: 'Full funnel reconstruction from strategy to implementation',
-      price: '$750–$1,200',
+      price: '$750–$1200',
       features: ['Strategy development', 'Complete rewrite', 'A/B test setup', 'Performance monitoring']
     }
   ];
@@ -160,6 +177,14 @@ const Services = () => {
     'BONUS: CRM + Review Automation Templates'
   ];
 
+  const premiumProduct = {
+    id: 'premium-all-in-one-growth-package',
+    title: 'All-In-One Growth Package',
+    price: '$950',
+    description: 'Everything you need to build, launch, and scale your business with cutting-edge automation',
+    features: premiumFeatures
+  };
+
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
@@ -224,12 +249,12 @@ const Services = () => {
                   ))}
                 </ul>
 
-                <Link
-                  to="/booking"
+                <button
+                  onClick={() => handleBuyNow(service, 'tier1')}
                   className="w-full bg-gradient-primary text-white py-3 px-6 rounded-full font-medium hover:bg-gradient-primary-hover hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
                 >
-                  Get Started
-                </Link>
+                  Buy Now
+                </button>
               </div>
             ))}
           </div>
@@ -284,12 +309,12 @@ const Services = () => {
                   ))}
                 </ul>
 
-                <Link
-                  to="/booking"
+                <button
+                  onClick={() => handleBuyNow(service, 'tier2')}
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-6 rounded-full font-medium hover:from-blue-600 hover:to-blue-700 hover:shadow-glow-blue transition-all duration-300 transform hover:scale-105 text-center block font-sans"
                 >
-                  Get Started
-                </Link>
+                  Buy Now
+                </button>
               </div>
             ))}
           </div>
@@ -344,12 +369,12 @@ const Services = () => {
                   ))}
                 </ul>
 
-                <Link
-                  to="/booking"
+                <button
+                  onClick={() => handleBuyNow(service, 'tier3')}
                   className="w-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white py-3 px-6 rounded-full font-medium hover:from-cyan-600 hover:to-teal-600 hover:shadow-glow transition-all duration-300 transform hover:scale-105 text-center block font-sans"
                 >
-                  Get Started
-                </Link>
+                  Buy Now
+                </button>
               </div>
             ))}
           </div>
@@ -404,12 +429,15 @@ const Services = () => {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/booking"
+                  <button
+                    onClick={() => {
+                      setSelectedProduct(premiumProduct);
+                      setIsPaymentModalOpen(true);
+                    }}
                     className="bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gradient-primary-hover hover:shadow-glow-lg transition-all duration-300 transform hover:scale-105 text-center font-sans animate-pulse-glow"
                   >
-                    Get This Package
-                  </Link>
+                    Buy This Package
+                  </button>
                   <Link
                     to="/contact"
                     className="bg-transparent text-text-heading px-8 py-4 rounded-full text-lg font-semibold border-2 border-teal-400 hover:bg-teal-400 hover:text-navy-900 transition-all duration-300 transform hover:scale-105 text-center font-sans hover:shadow-glow"
@@ -485,6 +513,18 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Payment Modal */}
+      {selectedProduct && (
+        <PaymentModal
+          isOpen={isPaymentModalOpen}
+          onClose={() => {
+            setIsPaymentModalOpen(false);
+            setSelectedProduct(null);
+          }}
+          product={selectedProduct}
+        />
+      )}
     </div>
   );
 };
