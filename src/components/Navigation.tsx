@@ -29,10 +29,10 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ${
       isScrolled 
         ? 'bg-navy-950/95 backdrop-blur-cyber border-b border-teal-500/20 shadow-glow' 
-        : 'bg-transparent'
+        : 'bg-navy-950/90 backdrop-blur-cyber border-b border-teal-500/10'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -75,7 +75,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-xl text-text-body hover:text-text-accent hover:bg-teal-500/10 transition-all duration-300"
+            className="md:hidden p-2 rounded-xl text-text-body hover:text-text-accent hover:bg-teal-500/10 transition-all duration-300 z-[10000]"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -83,7 +83,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-navy-950/95 backdrop-blur-cyber border-t border-teal-500/20 rounded-b-2xl shadow-glow-lg">
+          <div className="md:hidden bg-navy-950/98 backdrop-blur-cyber border-t border-teal-500/20 rounded-b-2xl shadow-glow-lg absolute left-4 right-4 top-20 z-[9998]">
             <div className="px-4 pt-4 pb-6 space-y-2">
               {navLinks.map((link) => (
                 <Link
