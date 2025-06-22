@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-background-light font-sans">
+      <div className="min-h-screen bg-gradient-cyber font-sans">
         <Navigation />
         <main>
           <Routes>
