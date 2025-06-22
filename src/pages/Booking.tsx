@@ -65,11 +65,12 @@ const Booking = () => {
 
   if (isSubmitted) {
     return (
-      <div className="pt-20 min-h-screen bg-gradient-to-b from-navy-50 to-white flex items-center justify-center">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white p-12 rounded-2xl shadow-xl border border-navy-100">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="h-10 w-10 text-green-600" />
+      <div className="pt-20 min-h-screen bg-gradient-cyber flex items-center justify-center relative">
+        <div className="absolute inset-0 bg-gradient-glow opacity-20"></div>
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="bg-navy-800/50 backdrop-blur-cyber p-12 rounded-2xl shadow-glow border border-teal-500/30">
+            <div className="w-20 h-20 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-teal-500/30">
+              <CheckCircle className="h-10 w-10 text-text-accent" />
             </div>
             <h1 className="text-3xl font-bold text-text-heading mb-4">
               Thank You for Your Booking!
@@ -78,7 +79,7 @@ const Booking = () => {
               I've received your project request and will get back to you within 24 hours with next steps, 
               timeline, and any additional questions I might have.
             </p>
-            <div className="bg-navy-50 p-4 rounded-lg mb-6">
+            <div className="bg-navy-700/50 p-4 rounded-lg mb-6 border border-teal-500/20">
               <p className="text-sm text-text-body">
                 <strong>What happens next:</strong><br />
                 • I'll review your project details<br />
@@ -89,7 +90,7 @@ const Booking = () => {
             </div>
             <button
               onClick={() => window.location.href = '/'}
-              className="bg-gradient-primary text-white px-8 py-3 rounded-full font-medium hover:bg-gradient-primary-hover transition-colors"
+              className="bg-gradient-primary text-white px-8 py-3 rounded-full font-medium hover:bg-gradient-primary-hover transition-colors shadow-glow animate-pulse-glow"
             >
               Return Home
             </button>
@@ -102,8 +103,9 @@ const Booking = () => {
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-navy-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 lg:py-24 bg-gradient-cyber relative">
+        <div className="absolute inset-0 bg-gradient-glow opacity-20"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-text-heading mb-6 animate-slide-up">
             Book Your Project
           </h1>
@@ -115,10 +117,11 @@ const Booking = () => {
       </section>
 
       {/* Booking Form */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl border border-navy-100 overflow-hidden">
-            <div className="bg-navy-50 px-8 py-6 border-b border-navy-200">
+      <section className="py-16 lg:py-24 bg-gradient-navy relative">
+        <div className="absolute inset-0 bg-gradient-glow opacity-10"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-navy-800/50 backdrop-blur-cyber rounded-2xl shadow-glow border border-teal-500/20 overflow-hidden">
+            <div className="bg-navy-700/50 px-8 py-6 border-b border-teal-500/20">
               <h2 className="text-2xl font-bold text-text-heading">Project Details</h2>
               <p className="text-text-body mt-2">
                 Tell me about your project so I can provide the best possible service
@@ -126,9 +129,9 @@ const Booking = () => {
             </div>
 
             {submitError && (
-              <div className="mx-8 mt-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
-                <AlertCircle className="h-5 w-5 text-red-600 mr-3" />
-                <p className="text-red-800">{submitError}</p>
+              <div className="mx-8 mt-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center">
+                <AlertCircle className="h-5 w-5 text-red-400 mr-3" />
+                <p className="text-red-400">{submitError}</p>
               </div>
             )}
 
@@ -143,11 +146,11 @@ const Booking = () => {
                     type="text"
                     id="fullName"
                     {...register('fullName', { required: 'Full name is required' })}
-                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors text-text-heading placeholder-text-light"
                     placeholder="Your full name"
                   />
                   {errors.fullName && (
-                    <p className="mt-1 text-sm text-red-600">{errors.fullName.message}</p>
+                    <p className="mt-1 text-sm text-red-400">{errors.fullName.message}</p>
                   )}
                 </div>
 
@@ -165,11 +168,11 @@ const Booking = () => {
                         message: 'Please enter a valid email address'
                       }
                     })}
-                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors text-text-heading placeholder-text-light"
                     placeholder="your@email.com"
                   />
                   {errors.email && (
-                    <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                    <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
                   )}
                 </div>
               </div>
@@ -185,8 +188,8 @@ const Booking = () => {
                       key={type.value}
                       className={`relative flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all ${
                         projectType === type.value
-                          ? 'border-teal-500 bg-teal-50'
-                          : 'border-navy-200 hover:border-navy-300'
+                          ? 'border-teal-500 bg-teal-500/10 shadow-cyber'
+                          : 'border-teal-500/30 hover:border-teal-500/50 bg-navy-700/30'
                       }`}
                     >
                       <input
@@ -198,17 +201,17 @@ const Booking = () => {
                       <div className="flex-1">
                         <div className="flex items-center justify-between">
                           <span className="font-medium text-text-heading">{type.label}</span>
-                          <span className="text-sm text-text-light">{type.price}</span>
+                          <span className="text-sm text-text-accent">{type.price}</span>
                         </div>
                       </div>
                       {projectType === type.value && (
-                        <div className="absolute top-2 right-2 w-2 h-2 bg-teal-500 rounded-full"></div>
+                        <div className="absolute top-2 right-2 w-2 h-2 bg-teal-500 rounded-full shadow-glow"></div>
                       )}
                     </label>
                   ))}
                 </div>
                 {errors.projectType && (
-                  <p className="mt-2 text-sm text-red-600">{errors.projectType.message}</p>
+                  <p className="mt-2 text-sm text-red-400">{errors.projectType.message}</p>
                 )}
               </div>
 
@@ -222,7 +225,7 @@ const Booking = () => {
                   <select
                     id="budget"
                     {...register('budget', { required: 'Please select a budget range' })}
-                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors text-text-heading"
                   >
                     <option value="">Select budget range</option>
                     {budgetRanges.map((range) => (
@@ -230,7 +233,7 @@ const Booking = () => {
                     ))}
                   </select>
                   {errors.budget && (
-                    <p className="mt-1 text-sm text-red-600">{errors.budget.message}</p>
+                    <p className="mt-1 text-sm text-red-400">{errors.budget.message}</p>
                   )}
                 </div>
 
@@ -244,7 +247,7 @@ const Booking = () => {
                     id="deadline"
                     {...register('deadline')}
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors text-text-heading"
                   />
                 </div>
               </div>
@@ -259,7 +262,7 @@ const Booking = () => {
                   id="projectDetails"
                   rows={6}
                   {...register('projectDetails', { required: 'Please provide project details' })}
-                  className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical"
+                  className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical text-text-heading placeholder-text-light"
                   placeholder="Please describe your project in detail. Include information about:
 • Your business and target audience
 • Current challenges or goals
@@ -268,12 +271,12 @@ const Booking = () => {
 • Expected outcomes or success metrics"
                 ></textarea>
                 {errors.projectDetails && (
-                  <p className="mt-1 text-sm text-red-600">{errors.projectDetails.message}</p>
+                  <p className="mt-1 text-sm text-red-400">{errors.projectDetails.message}</p>
                 )}
               </div>
 
               {/* Submit Button */}
-              <div className="border-t border-navy-200 pt-8">
+              <div className="border-t border-teal-500/20 pt-8">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between">
                   <div className="mb-4 sm:mb-0">
                     <p className="text-sm text-text-body">
@@ -283,7 +286,7 @@ const Booking = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gradient-primary-hover transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+                    className="bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gradient-primary-hover transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center shadow-glow hover:shadow-glow-lg animate-pulse-glow"
                   >
                     {isSubmitting ? (
                       'Submitting...'
@@ -299,8 +302,9 @@ const Booking = () => {
       </section>
 
       {/* What Happens Next */}
-      <section className="py-16 bg-navy-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-navy-900 relative">
+        <div className="absolute inset-0 bg-gradient-glow opacity-10"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-text-heading mb-4">
               What Happens Next?
@@ -331,8 +335,8 @@ const Booking = () => {
                 time: '1-2 days'
               }
             ].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div key={index} className="text-center p-6 bg-navy-800/50 backdrop-blur-cyber rounded-2xl border border-teal-500/20">
+                <div className="bg-gradient-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 shadow-glow">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold text-text-heading mb-3">
@@ -341,7 +345,7 @@ const Booking = () => {
                 <p className="text-text-body mb-2 leading-relaxed">
                   {step.description}
                 </p>
-                <span className="text-sm font-medium text-text-light">
+                <span className="text-sm font-medium text-text-accent">
                   {step.time}
                 </span>
               </div>

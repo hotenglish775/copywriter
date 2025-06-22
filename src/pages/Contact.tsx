@@ -33,8 +33,9 @@ const Contact = () => {
   return (
     <div className="pt-20 animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-navy-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 lg:py-24 bg-gradient-cyber relative">
+        <div className="absolute inset-0 bg-gradient-glow opacity-20"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-text-heading mb-6 animate-slide-up">
             Let's Start a Conversation
           </h1>
@@ -46,8 +47,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-gradient-navy relative">
+        <div className="absolute inset-0 bg-gradient-glow opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div className="animate-slide-up">
@@ -57,8 +59,8 @@ const Contact = () => {
               
               <div className="space-y-8 mb-12">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-teal-100 p-3 rounded-xl flex-shrink-0">
-                    <Mail className="h-6 w-6 text-teal-700" />
+                  <div className="bg-teal-500/20 p-3 rounded-xl flex-shrink-0 border border-teal-500/30">
+                    <Mail className="h-6 w-6 text-text-accent" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-text-heading mb-1">Email</h3>
@@ -70,8 +72,8 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-teal-100 p-3 rounded-xl flex-shrink-0">
-                    <Phone className="h-6 w-6 text-teal-700" />
+                  <div className="bg-teal-500/20 p-3 rounded-xl flex-shrink-0 border border-teal-500/30">
+                    <Phone className="h-6 w-6 text-text-accent" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-text-heading mb-1">Phone</h3>
@@ -83,8 +85,8 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-teal-100 p-3 rounded-xl flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-teal-700" />
+                  <div className="bg-teal-500/20 p-3 rounded-xl flex-shrink-0 border border-teal-500/30">
+                    <MapPin className="h-6 w-6 text-text-accent" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-text-heading mb-1">Location</h3>
@@ -97,7 +99,7 @@ const Contact = () => {
               </div>
 
               {/* FAQ Section */}
-              <div className="bg-navy-50 p-6 rounded-2xl">
+              <div className="bg-navy-800/50 backdrop-blur-cyber p-6 rounded-2xl border border-teal-500/20">
                 <h3 className="text-lg font-semibold text-text-heading mb-4">
                   Frequently Asked Questions
                 </h3>
@@ -132,15 +134,15 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-slide-up">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-navy-100">
+              <div className="bg-navy-800/50 backdrop-blur-cyber p-8 rounded-2xl shadow-glow border border-teal-500/20">
                 <h3 className="text-2xl font-bold text-text-heading mb-6">
                   Send a Message
                 </h3>
 
                 {isSubmitted && (
-                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
-                    <p className="text-green-800">
+                  <div className="mb-6 p-4 bg-teal-500/20 border border-teal-500/30 rounded-lg flex items-center">
+                    <CheckCircle className="h-5 w-5 text-text-accent mr-3" />
+                    <p className="text-text-accent">
                       Thank you for your message! I'll get back to you within 24 hours.
                     </p>
                   </div>
@@ -155,11 +157,11 @@ const Contact = () => {
                       type="text"
                       id="name"
                       {...register('name', { required: 'Name is required' })}
-                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors text-text-heading placeholder-text-light"
                       placeholder="Your full name"
                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+                      <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
                     )}
                   </div>
 
@@ -177,11 +179,11 @@ const Contact = () => {
                           message: 'Please enter a valid email address'
                         }
                       })}
-                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors text-text-heading placeholder-text-light"
                       placeholder="your@email.com"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                      <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
                     )}
                   </div>
 
@@ -193,11 +195,11 @@ const Contact = () => {
                       type="text"
                       id="subject"
                       {...register('subject', { required: 'Subject is required' })}
-                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors text-text-heading placeholder-text-light"
                       placeholder="What's this about?"
                     />
                     {errors.subject && (
-                      <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
+                      <p className="mt-1 text-sm text-red-400">{errors.subject.message}</p>
                     )}
                   </div>
 
@@ -209,18 +211,18 @@ const Contact = () => {
                       id="message"
                       rows={6}
                       {...register('message', { required: 'Message is required' })}
-                      className="w-full px-4 py-3 border border-navy-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical"
+                      className="w-full px-4 py-3 bg-navy-700/50 border border-teal-500/30 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical text-text-heading placeholder-text-light"
                       placeholder="Tell me about your project or ask any questions..."
                     ></textarea>
                     {errors.message && (
-                      <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+                      <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
                     )}
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-gradient-primary-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-gradient-primary-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-glow hover:shadow-glow-lg animate-pulse-glow"
                   >
                     {isSubmitting ? (
                       'Sending...'
@@ -239,13 +241,14 @@ const Contact = () => {
       </section>
 
       {/* Map Section (Placeholder) */}
-      <section className="py-16 bg-navy-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-navy-200 h-64 rounded-2xl flex items-center justify-center">
+      <section className="py-16 bg-navy-900 relative">
+        <div className="absolute inset-0 bg-gradient-glow opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-navy-800/50 backdrop-blur-cyber h-64 rounded-2xl flex items-center justify-center border border-teal-500/20">
             <div className="text-center">
-              <MapPin className="h-12 w-12 text-navy-500 mx-auto mb-4" />
-              <p className="text-navy-600 font-medium">Google Maps Integration</p>
-              <p className="text-navy-500 text-sm">Working with clients worldwide</p>
+              <MapPin className="h-12 w-12 text-text-accent mx-auto mb-4" />
+              <p className="text-text-heading font-medium">Google Maps Integration</p>
+              <p className="text-text-body text-sm">Working with clients worldwide</p>
             </div>
           </div>
         </div>
